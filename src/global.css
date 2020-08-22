@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Open+Sans+Condensed:wght@300&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #222222;
+  -webkit-font-smoothing: antialiased;
+}
+input,
+button,
+textarea {
+  font-family: 'Open Sans', sans-serif;
+}
+button {
+  cursor: pointer;
+}
+::-webkit-scrollbar {
+  display: none
+}
