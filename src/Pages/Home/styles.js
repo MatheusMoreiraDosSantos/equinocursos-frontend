@@ -104,7 +104,7 @@ export const ContainerCard = styled.div`
 `;
 export const Card = styled.div`
     width: 300px;
-    height: 550px;
+    height: 610px;
     font-family: 'Nunito', sans-serif;
     font-weight: normal;
     font-size: 18px;
