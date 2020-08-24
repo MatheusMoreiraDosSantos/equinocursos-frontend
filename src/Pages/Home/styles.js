@@ -223,3 +223,6 @@ export const ButtonSave = styled.button`
         opacity: 0.8;
     }
 `;
+export const ButtonHelpMobile = styled.button`
+    border: 0;
+`;

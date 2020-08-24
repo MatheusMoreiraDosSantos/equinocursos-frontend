@@ -8,6 +8,8 @@ import {
     IoMdHelpCircleOutline
 } from 'react-icons/io';
 
+import { CommonLoading } from 'react-loadingg';
+
 import { 
     Container,
     Header,
@@ -22,11 +24,13 @@ import {
     ButtonSearchMobile,
     ButtonRegistrarMobile,
     ContainerRegistrar,
-    ButtonSave
+    ButtonSave,
+    ButtonHelpMobile
  } from './styles';
 
 function Home() {
 
+    const [loading, setLoading] = useState(false);
     const [registrar, setRegistrar] = useState('none');
     const [cursos, setCursos] = useState([]);
     const [curso, setCurso] = useState({
@@ -51,9 +55,10 @@ function Home() {
     }
 
     const loadCursos = useCallback( async() => {
-        api
+        await api
           .get(`/cursos`)
           .then((response) => setCursos(response.data));
+          setLoading(true);
     }, []);
 
     async function searchCursos(){
@@ -130,31 +135,41 @@ function Home() {
           </Header>
           <ContainerCard>
                 {
-                    cursos.map((c) => (
-                        <Card key={c.id}>
-                            <img src={c.img} alt={c.id} />
-                            <h4>Curso de: {c.disciplina}</h4>
-                            <h4>Instrutor: {c.instrutor}</h4>
-                            <h4>Local: {c.local}</h4>
-                            <h4>Data de Início: {c.inicio}</h4>
-                            <h4>Data de Término: {c.final}</h4>
-                            <h4>Valores: {c.valores}</h4>
-                            <h4>Contato: {c.contato}</h4>
-                         </Card>
-                    ))
+                    loading === true ? (
+                        cursos.map((c) => (
+                            <Card key={c.id}>
+                                <img src={c.img} alt={c.id} />
+                                <h4>Curso de: {c.disciplina}</h4>
+                                <h4>Instrutor: {c.instrutor}</h4>
+                                <h4>Local: {c.local}</h4>
+                                <h4>Data de Início: {c.inicio}</h4>
+                                <h4>Data de Término: {c.final}</h4>
+                                <h4>Valores: {c.valores}</h4>
+                                <h4>Contato: {c.contato}</h4>
+                             </Card>
+                        ))
+                    ) : (
+                        <CommonLoading/>
+                    )  
                 }
           </ContainerCard>
           <HeaderMobile>
             <div>
-            <SearchMobile placeholder="Buscar por..."  type="search"  />
-                <ButtonSearchMobile> 
+            <SearchMobile placeholder="Buscar por..." 
+                    type="search" 
+                    value={value || ""}
+                    onChange={(e) => setValue(e.target.value)}
+            />
+                <ButtonSearchMobile onClick={() => searchCursos()} > 
                     <IoMdSearch size="25" />
                 </ButtonSearchMobile>
             </div>
             <ButtonRegistrarMobile onClick={() => handleRegistrar()} >
                 <IoMdAddCircleOutline size="25"/>
-                <IoMdHelpCircleOutline onClick={() => help()} size="25" />
             </ButtonRegistrarMobile>
+            <ButtonHelpMobile>
+                <IoMdHelpCircleOutline onClick={() => help()} size="25" />
+            </ButtonHelpMobile>
           </HeaderMobile>
           <ContainerRegistrar>
             <CardRegistrar style={{display: registrar}} >
