@@ -23,7 +23,7 @@ export const Header = styled.div`
         align-items: center;
     }
 
-    @media(max-width: 790px){
+    @media(max-width: 855px){
         display: none;
     }
 
@@ -45,7 +45,7 @@ export const Search = styled.input`
     padding: 6px;
     font-size: 1.0rem;
 
-    @media(max-width: 790px){
+    @media(max-width: 855px){
         display: none;
     }
 `;
@@ -66,25 +66,24 @@ export const ButtonSearch = styled.button`
         opacity: 0.8;
     }
 
-    @media(max-width: 790px){
+    @media(max-width: 855px){
         display: none;
     }
 `;
 export const ButtonRegistrar = styled.button`
-    width: 200px;
-    height: 35px;
-    background: #1D3240;
+    width: 230px;
+    height: 30px;
     color: #fff;
-    border: 0;
+    border: 1px solid #fff;
     border-radius: 5px;
     padding: 6px;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
 
     &:hover {
         opacity: 0.8;
     }
 
-    @media(max-width: 790px){
+    @media(max-width: 855px){
         display: none;
     }
 `;
@@ -97,8 +96,8 @@ export const ContainerCard = styled.div`
     grid-template-columns: repeat(auto-fit, minmax(310px, auto));
     justify-content: center;
 
-    @media(max-width: 750px){
-        margin-top: 20px;
+    @media(max-width: 855px){
+        margin-top: 25px;
     }
 
 `;
@@ -123,7 +122,7 @@ export const Card = styled.div`
 export const HeaderMobile = styled.div`
     display: none;
 
-    @media(max-width: 790px){
+    @media(max-width: 855px){
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -180,6 +179,8 @@ export const CardRegistrar = styled.div`
     position: fixed;
     top: 0;
 
+    
+
     > h2 {
         font-size: 1.2rem;
         >button{
@@ -200,7 +201,6 @@ export const CardRegistrar = styled.div`
             border:0;
             border-radius: 5px;
             background: #fff;
-            /* color: #000; */
             width: 270px;
             height: 30px;
             padding: 8px;
@@ -225,4 +225,30 @@ export const ButtonSave = styled.button`
 `;
 export const ButtonHelpMobile = styled.button`
     border: 0;
+`;
+export const TopMobile = styled.div`
+   display: none;
+   @media(max-width: 855px){
+    display: flex;
+    position: fixed;
+    top:0;
+    width: 100%;
+    height: 35px;
+    background: #ed145b;
+    padding: 5px;
+    color: #fff;
+    justify-content: space-between;
+
+    svg{
+        fill: #fff;
+        &:hover{
+            fill: #ed145b;
+        }
+    }
+
+    > h3 {
+        font-size: 0.98rem;
+    }
+
+   }
 `;

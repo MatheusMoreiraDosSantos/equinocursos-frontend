@@ -25,7 +25,8 @@ import {
     ButtonRegistrarMobile,
     ContainerRegistrar,
     ButtonSave,
-    ButtonHelpMobile
+    ButtonHelpMobile,
+    TopMobile
  } from './styles';
 
 function Home() {
@@ -130,7 +131,7 @@ function Home() {
             />
             <ButtonSearch onClick={() => searchCursos()}> Buscar </ButtonSearch>
             </div>
-            <ButtonRegistrar onClick={() => handleRegistrar()} >Cadastrar Curso</ButtonRegistrar>
+            <ButtonRegistrar onClick={() => handleRegistrar()} >Cadastre seu curso também</ButtonRegistrar>
             <IoMdHelpCircleOutline onClick={() => help()} size="30" />
           </Header>
           <ContainerCard>
@@ -153,6 +154,12 @@ function Home() {
                     )  
                 }
           </ContainerCard>
+          <TopMobile>
+                <h3>Encontre o curso mais proximo de você</h3>
+                <ButtonHelpMobile>
+                <IoMdHelpCircleOutline onClick={() => help()} size="25" />
+            </ButtonHelpMobile>
+          </TopMobile>
           <HeaderMobile>
             <div>
             <SearchMobile placeholder="Buscar por..." 
@@ -167,9 +174,6 @@ function Home() {
             <ButtonRegistrarMobile onClick={() => handleRegistrar()} >
                 <IoMdAddCircleOutline size="25"/>
             </ButtonRegistrarMobile>
-            <ButtonHelpMobile>
-                <IoMdHelpCircleOutline onClick={() => help()} size="25" />
-            </ButtonHelpMobile>
           </HeaderMobile>
           <ContainerRegistrar>
             <CardRegistrar style={{display: registrar}} >
