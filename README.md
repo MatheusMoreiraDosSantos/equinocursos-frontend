@@ -11,3 +11,4 @@ facilitando a busca do usuário por capacitação mais próximo de onde vive.
 Para executar este projeto primeiro rode o comando `yarn` para instalar as dependências e em seguida `yarn start`, <br />
 assim o projeto será aberto em uma nova guia do seu navegador padrão nesse [endereço](http://localhost:3000) 
 
+![Print1](https://github.com/MatheusMoreiraDosSantos/equinocursos-frontend/blob/master/Capturar.PNG)
