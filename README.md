@@ -12,3 +12,4 @@ Para executar este projeto primeiro rode o comando `yarn` para instalar as depen
 assim o projeto será aberto em uma nova guia do seu navegador padrão nesse [endereço](http://localhost:3000) 
 
 ![Print1](https://github.com/MatheusMoreiraDosSantos/equinocursos-frontend/blob/master/Capturar.PNG)
+![Print2](https://github.com/MatheusMoreiraDosSantos/equinocursos-frontend/blob/master/p.jpg)
