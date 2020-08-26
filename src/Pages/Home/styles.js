@@ -91,6 +91,7 @@ export const ContainerCard = styled.div`
     width: 100%;
     height: 100%;
     margin-top: 70px;
+    margin-bottom: 45px;
     padding: 10px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(310px, auto));
