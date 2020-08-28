@@ -5,12 +5,13 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
 `;
+
 export const Header = styled.div`
     width: 100%;
     height: 60px;
     position: fixed;
     top:0;
-    background: #ed145b;
+    background:linear-gradient(90deg, #da4453 0%,#89216b 100% );
     color: #fff;
     display: flex;
     flex-direction: row;
@@ -36,6 +37,7 @@ export const Header = styled.div`
         }
     }
 `;
+
 export const Search = styled.input`
     width: 300px;
     height: 35px;
@@ -49,6 +51,7 @@ export const Search = styled.input`
         display: none;
     }
 `;
+
 export const ButtonSearch = styled.button`
     width: 90px;
     height: 33px;
@@ -70,6 +73,7 @@ export const ButtonSearch = styled.button`
         display: none;
     }
 `;
+
 export const ButtonRegistrar = styled.button`
     width: 230px;
     height: 30px;
@@ -87,6 +91,7 @@ export const ButtonRegistrar = styled.button`
         display: none;
     }
 `;
+
 export const ContainerCard = styled.div`
     width: 100%;
     height: 100%;
@@ -102,6 +107,7 @@ export const ContainerCard = styled.div`
     }
 
 `;
+
 export const Card = styled.div`
     width: 300px;
     height: 610px;
@@ -109,9 +115,9 @@ export const Card = styled.div`
     font-weight: normal;
     font-size: 18px;
     border-radius: 5px;
-    background: #292929;
+    background: #222222;
     padding: 10px;
-    color: #b5b5b5;
+    color: #8a8a8a;
     margin: 10px;
 
     > img {
@@ -120,6 +126,7 @@ export const Card = styled.div`
         border-radius: 5px;
     }
 `;
+
 export const HeaderMobile = styled.div`
     display: none;
 
@@ -130,7 +137,7 @@ export const HeaderMobile = styled.div`
         justify-content: space-between;
         width: 100%;
         height: 50px;
-        background: #ed145b;
+        background:linear-gradient(90deg, #da4453 0%,#89216b 100% );
         position: fixed;
         bottom: 0;
         padding: 10px;
@@ -144,6 +151,7 @@ export const HeaderMobile = styled.div`
         }
     }
 `;
+
 export const SearchMobile = styled.input`
     width: 250px;
     height: 32px;
@@ -154,33 +162,35 @@ export const SearchMobile = styled.input`
     color: #000;
     margin-right: 4px;
 `;
+
 export const ButtonSearchMobile = styled.button`
     border: 0;
 `;
+
 export const ButtonRegistrarMobile = styled.button`
     border: 0;
     :first-child{
         margin-right: 9px;
     }
 `;
+
 export const ContainerRegistrar = styled.div`
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
 `;
+
 export const CardRegistrar = styled.div`
     width: 90%;
     max-width: 330px;
     height: 650px;
-    background: #666;
+    background: #292929;
     padding: 10px;
     border-radius: 5px;
     color: #fff;
     position: fixed;
     top: 0;
-
-    
 
     > h2 {
         font-size: 1.2rem;
@@ -224,9 +234,11 @@ export const ButtonSave = styled.button`
         opacity: 0.8;
     }
 `;
+
 export const ButtonHelpMobile = styled.button`
     border: 0;
 `;
+
 export const TopMobile = styled.div`
    display: none;
    @media(max-width: 855px){
@@ -235,7 +247,7 @@ export const TopMobile = styled.div`
     top:0;
     width: 100%;
     height: 35px;
-    background: #ed145b;
+    background:linear-gradient(90deg, #da4453 0%,#89216b 100% );
     padding: 5px;
     color: #fff;
     justify-content: space-between;

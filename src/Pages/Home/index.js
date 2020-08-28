@@ -77,8 +77,6 @@ function Home() {
             curso.disciplina === "" ||
             curso.instrutor === ""||
             curso.local === "" ||
-            curso.inicio === "" ||
-            curso.final === ""||
             curso.valores === "" ||
             curso.contato === "" ||
             curso.img === ""
